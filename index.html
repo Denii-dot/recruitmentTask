@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdanie rekturtacyjne</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-8">
+                <form action="">
+                    <fieldset>
+                        <legend class="mb-3">Dodaj tablice, a ja wyszukam najdłuższy jej podciąg rosnący</legend>
+                        <p class="text-left">(liczby oddziel spacją, podaj tylko liczby całkowite np. 10 20 30)</p>
+                        <div id="ArrayContainer">
+                            <div class="mb-3">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <input class="form-control" type="text" name="array" id="array"
+                                                placeholder="Podaj tablice" aria-label="tablice"></input>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <button id="clearArray" class="btn btn-danger removeBtn"
+                                                type="button">czyść</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <button id="checkArray" type="button" class="btn btn-success">Sprawdź</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="col-3"></div>
+                <div class="col-6" id="resultArray" class="text-center" style="height: 150px;"></div>
+                <form action="">
+                    <fieldset>
+                        <legend class="mb-3">Wybierz 2 daty, ja policzę dni robocze między tymi datami. </legend>
+                        <p class="text-left">(nie uwzględniam świąt, tylko weekendy)</p>
+                        <div id="dateContainer">
+                            <div class="mb-3">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <input class="form-control" type="date" name="array" id="firstDate"></input>
+                                        </div>
+                                        <div class="col-4">
+                                            <input class="form-control" type="date" name="array"
+                                                id="secondDate"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-5">
+                            <button id="checkWorkingDays" type="button" class="mx-4 btn btn-success">Sprawdź</button>
+                            <button id="clearDays" class="btn btn-danger removeBtn" type="button">Przywróć
+                                daty domyślne
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="col-3"></div>
+                <div class="col-6" id="resultDate" class="text-center" style="height: 150px;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="src/app.js" type="module"></script>
+</body>
+
+</html>
